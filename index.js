@@ -15,9 +15,8 @@ const settings = {
     port: process.env.PORT || 3000
 }
 
-
 app.get('/test', (req, res) => {
-    res.send('');
+    res.send('MUSTAPHA MASTOUR');
 });
 
 app.listen(settings.port, function() {
