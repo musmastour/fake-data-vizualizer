@@ -12,12 +12,12 @@ app.use(
 )
 
 const settings = {
-    port: 3000
+    port: process.env.PORT || 3000
 }
 
 
 app.get('/test', (req, res) => {
-    res.send('MUS');
+    res.send('');
 });
 
 app.listen(settings.port, function() {
