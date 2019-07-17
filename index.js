@@ -28,7 +28,7 @@ app.get('/test', (req, res) => {
 });
 
 app.get('/get/all/engines', (req, res) => {
-    pool.query('SELECT * FORM engine', (err, result) => {
+    pool.query('SELECT * FROM engine', (err, result) => {
         if (err && result === undefined) {
             console.log(err)
             throw err
