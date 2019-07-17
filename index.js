@@ -37,6 +37,16 @@ app.get('/get/all/engines', (req, res) => {
     })
 });
 
+app.get('/get/global/infos', (req, res) => {
+    pool.query('SELECT * FROM global_info', (err, result) => {
+        if (err && result === undefined) {
+            console.log(err)
+            throw err
+        }
+        res.send(result.rows);
+    })
+});
+
 app.listen(settings.port, function() {
     console.log("Listening on port: ", settings.port);
 })
