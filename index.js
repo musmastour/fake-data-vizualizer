@@ -23,9 +23,7 @@ const pool = new pg.Pool({
     port: '5432'
 });
 
-app.get('/test', (req, res) => {
-    res.send('MUSTAPHA MASTOUR');
-});
+
 
 app.get('/get/all/engines', (req, res) => {
     pool.query('SELECT * FROM engine', (err, result) => {
@@ -33,6 +31,7 @@ app.get('/get/all/engines', (req, res) => {
             console.log(err)
             throw err
         }
+        res.header("Access-Control-Allow-Origin", "*");
         res.send(result.rows);
     })
 });
