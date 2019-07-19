@@ -27,6 +27,9 @@ const pool = new pg.Pool({
 });
 
 app.get('/generate/data', (req, res) => {
+
+    res.header("Access-Control-Allow-Origin", "*");
+    
     var date = new Date();
 
         // var seconds = date.getSeconds()
