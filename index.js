@@ -40,8 +40,8 @@ app.get('/generate/data', (req, res) => {
         var data = {
             date: date,
             temperatureOutside: faker.random.number({
-                'min': 10,
-                'max': 50
+                'min': 20,
+                'max': 25
             }),
             powerConsumption: {
                 motor1: faker.random.number({
@@ -66,7 +66,7 @@ app.get('/generate/data', (req, res) => {
                 'max': 200
             }),
             gasConsumption: faker.random.number({
-                'min': 5,
+                'min': 18,
                 'max': 25
             }),
             outputPotatoes: faker.random.number({
