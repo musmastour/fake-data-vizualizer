@@ -17,7 +17,7 @@ const settings = {
     port: process.env.PORT || 3000
 }
 
-app.get('get/output/potatoes', (req, res) => {
+app.get('/get/output/potatoes', (req, res) => {
 
     res.header("Access-Control-Allow-Origin", "*");
     var data = []
